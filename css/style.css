@@ -1,0 +1,153 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px; }
+  .header-container .logo {
+    text-align: center; }
+  .header-container .search-input {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 10px; }
+
+.results {
+  overflow: auto;
+  transition: all 0.5s;
+  flex: 0;
+  width: 100%; }
+  .results.active {
+    flex: 1; }
+  .results .items-container .thumbs {
+    text-align: center; }
+  .results .items-container .btns-wrapper {
+    display: flex;
+    justify-content: center; }
+    .results .items-container .btns-wrapper .page-indicator {
+      padding: 15px;
+      text-align: center;
+      text-transform: uppercase; }
+  .results .no-results-error {
+    text-align: center; }
+
+.thumbnail-container {
+  display: inline-block;
+  border: 1px solid #9D5C63;
+  margin: 5px;
+  min-width: 150px;
+  width: 100%;
+  max-width: 350px;
+  height: 135px;
+  align-self: flex-start;
+  cursor: pointer;
+  box-shadow: inset 0 0 3px #000000;
+  border-radius: 3px;
+  background: white; }
+  .thumbnail-container.selected {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    margin: 0;
+    max-width: none;
+    overflow: auto;
+    transition: all 1s ease; }
+    .thumbnail-container.selected .small-info {
+      display: none; }
+    .thumbnail-container.selected .expanded {
+      display: flex; }
+  .thumbnail-container .small-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: left; }
+    .thumbnail-container .small-info .poster {
+      width: 80px;
+      height: 110px;
+      margin-right: 10px;
+      background: #efefef no-repeat center center;
+      background-size: cover; }
+    .thumbnail-container .small-info .title {
+      flex: 1; }
+  .thumbnail-container .expanded {
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    transition: all 1s ease; }
+    .thumbnail-container .expanded .top-bar {
+      height: 40px;
+      width: 100%;
+      background: #dfdfdf;
+      display: flex;
+      align-items: center;
+      padding: 0 10px; }
+      .thumbnail-container .expanded .top-bar h3 {
+        flex: 1;
+        text-align: left;
+        margin: 0 0 0 10px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden; }
+    .thumbnail-container .expanded .info {
+      flex: 1;
+      display: flex;
+      padding: 15px; }
+      .thumbnail-container .expanded .info .thumb {
+        width: 30%;
+        max-width: 190px;
+        margin-right: 10px; }
+        .thumbnail-container .expanded .info .thumb img {
+          width: 100%; }
+      .thumbnail-container .expanded .info .details {
+        flex: 1;
+        height: 100%;
+        overflow: auto;
+        max-width: 700px; }
+        .thumbnail-container .expanded .info .details .plot {
+          margin: 10px 0; }
+        .thumbnail-container .expanded .info .details .country {
+          margin: 10px 0; }
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+  body .app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; }
+
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 5px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #9D5C63;
+  border-radius: 4px; }
+  input[type=text]:focus, textarea:focus {
+    box-shadow: 0 0 5px #E4BB97;
+    border: 1px solid #E4BB97; }
+
+.page-loader {
+  width: 100%;
+  height: 100%;
+  background: url(http://nlremodeling.com/img/sliders/loader.gif) no-repeat center center; }
+
+/*# sourceMappingURL=style.css.map */

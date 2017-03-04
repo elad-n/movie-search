@@ -1,0 +1,11 @@
+.movie-container .description {
+  display: inline-block;
+  width: 70%; }
+.movie-container .poster {
+  display: inline-block;
+  width: 26%; }
+  .movie-container .poster img {
+    height: 80px;
+    width: 80px; }
+
+/*# sourceMappingURL=_thumbnail.css.map

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Movie Lib</title>
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/mrmrs/btns/dbbfe61b/css/btns.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--JS libs-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.min.js"></script>
+</head>
+
+<body>
+<div class="app-container" ng-controller="mainCtrl">
+    <search-bar query="query"></search-bar>
+    <results query="query"></results>
+</div>
+
+<script src="app.js"></script>
+<!--services-->
+<script src="js/services/dataSrv.service.js"></script>
+<!--controllers-->
+<script src="js/controllers/main.ctrl.js"></script>
+<!--directives-->
+<script src="directives/search-bar/search-bar.directive.js"></script>
+<script src="directives/results/results.directive.js"></script>
+<script src="directives/thumbnail/thumbnail.directive.js"></script>
+
+</body>
+</html>

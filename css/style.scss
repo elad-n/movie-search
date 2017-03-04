@@ -1,0 +1,50 @@
+@import "../directives/search-bar/search-bar";
+@import "../directives/results/results";
+@import "../directives/thumbnail/thumbnail";
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 5px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #9D5C63;
+  border-radius: 4px;
+
+  &:focus {
+    box-shadow: 0 0 5px #E4BB97;
+    border: 1px solid #E4BB97;
+  }
+}
+
+
+.page-loader {
+  width: 100%;
+  height: 100%;
+  background: url(http://nlremodeling.com/img/sliders/loader.gif) no-repeat center center;
+}

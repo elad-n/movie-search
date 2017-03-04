@@ -1,0 +1,33 @@
+<div class="thumbnail-container">
+    <div class="page-loader" ng-if="loading"></div>
+
+    <div class="small-info" ng-click="openThumb()">
+        <div class="poster" ng-style="{'background-image': 'url('+movie.Poster+')'}"></div>
+        <div class="title">
+            {{movie.Title}}
+            <div class="year">{{movie.Year}}</div>
+        </div>
+    </div>
+
+    <div class="expanded" ng-if="!loading">
+        <div class="top-bar">
+            <button ng-click="closeThumb()">< Back</button>
+            <h3>{{movie.Title}}</h3>
+        </div>
+        <div class="info">
+            <div class="thumb">
+                <img ng-src="{{movie.Poster}}" alt="">
+            </div>
+            <div class="details">
+                <h1>{{movie.Title}}</h1>
+
+                <div class="rating">Rating: {{fullItem.imdbRating}}</div>
+                <div class="release-date">Release date: {{fullItem.Released}}</div>
+                <div class="plot">{{fullItem.Plot}}</div>
+                <div class="awards">Awards: {{fullItem.Awards}}</div>
+                <div class="country">Country: {{fullItem.Country}}</div>
+                <div class="actors">Actors: {{fullItem.Actors}}</div>
+            </div>
+        </div>
+    </div>
+</div>

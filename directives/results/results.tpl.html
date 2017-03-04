@@ -1,0 +1,23 @@
+<div class="results" ng-class="{active: results.length > 0 || noResults || loading}">
+    <div class="page-loader" ng-if="loading"></div>
+
+    <div class="no-results-error" ng-if="!loading && noResults">No results found</div>
+
+    <div ng-if="!loading && results.length > 0" class="items-container">
+        <div class="thumbs">
+            <thumbnail ng-repeat="item in results"
+                       ng-class="{selected: $parent.selected == item}"
+                       selected="selected"
+                       close-thumb="closeThumb()"
+                       open-thumb="selectMovie(item)"
+                       movie="item"></thumbnail>
+        </div>
+
+        <div class="btns-wrapper">
+            <a class="btn" ng-click="prev()">prev</a>
+            <span class="page-indicator">page {{currentPage}}</span>
+            <a class="btn" ng-click="next()">next</a>
+        </div>
+    </div>
+</div>
+

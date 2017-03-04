@@ -1,0 +1,18 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+
+  .logo {
+    text-align: center;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 10px;
+  }
+}
