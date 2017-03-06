@@ -57,6 +57,23 @@
     flex-direction: column;
     text-align: left;
     transition: all 1s ease;
+    cursor: initial;
+
+    .back-btn {
+      background: inherit;
+      color: white;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      -webkit-transition: color .4s, background-color .4s, border .4s;
+      transition: color .4s, background-color .4s, border .4s;
+      height: 40px;
+      border: none;
+
+      &:hover {
+        opacity: 0.5;
+        transition: color .4s, background-color .4s, border .4s;
+      }
+    }
 
     .top-bar {
       height: 40px;

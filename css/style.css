@@ -77,7 +77,20 @@
     display: none;
     flex-direction: column;
     text-align: left;
-    transition: all 1s ease; }
+    transition: all 1s ease;
+    cursor: initial; }
+    .thumbnail-container .expanded .back-btn {
+      background: inherit;
+      color: white;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      -webkit-transition: color .4s, background-color .4s, border .4s;
+      transition: color .4s, background-color .4s, border .4s;
+      height: 40px;
+      border: none; }
+      .thumbnail-container .expanded .back-btn:hover {
+        opacity: 0.5;
+        transition: color .4s, background-color .4s, border .4s; }
     .thumbnail-container .expanded .top-bar {
       height: 40px;
       width: 100%;
